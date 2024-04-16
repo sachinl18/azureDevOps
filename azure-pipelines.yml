@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: MyubuntuAgentpool
+pool: 
+name: MyubuntuAgentpool
 
 steps:
 - task: Maven@3
