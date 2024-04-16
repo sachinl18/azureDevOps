@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: MyubuntuAgentpool
+pool: 
+  vmImage: 'MyubuntuAgentpool'
   
 
 steps:
