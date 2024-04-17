@@ -20,7 +20,3 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- task: Maven@3
-  inputs:
-    mavenPath: '/path/to/maven/bin/mvn'
-    goals: 'clean install'
