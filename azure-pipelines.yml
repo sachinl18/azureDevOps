@@ -19,4 +19,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- script: |
+    echo "JAVA_HOME: $JAVA_HOME"
+    echo "PATH: $PATH"
+  displayName: 'Debug Environment'
 
