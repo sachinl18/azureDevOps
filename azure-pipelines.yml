@@ -24,8 +24,5 @@ steps:
     echo "PATH: $PATH"
   displayName: 'Debug Environment'
 
-- script: |
-    java -version
-  displayName: 'Check JDK Version'
 
 
