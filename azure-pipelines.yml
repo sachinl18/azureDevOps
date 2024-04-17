@@ -20,16 +20,20 @@ steps:
     goals: 'package'
 - script: |
     # Download Maven
-    curl -O https://apache.mirror.digitalpacific.com.au/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+    curl -O https://apache.mirror.digitalpacific.com.au/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz || exit 1
     
     # Extract Maven
-    tar xzf apache-maven-3.8.4-bin.tar.gz
+    tar xzf apache-maven-3.8.4-bin.tar.gz || exit 1
     
     # Move Maven to desired location
-    mv apache-maven-3.8.4 /usr/local
+    sudo mv apache-maven-3.8.4 /usr/local || exit 1
     
     # Set environment variables
     export M2_HOME=/usr/local/apache-maven-3.8.4
     export MAVEN_HOME=/usr/local/apache-maven-3.8.4
     export PATH=$PATH:$M2_HOME/bin
+    
+    # Cleanup
+    rm apache-maven-3.8.4-bin.tar.gz || exit 1
   displayName: 'Install Maven'
+
