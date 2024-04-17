@@ -18,3 +18,18 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- script: |
+    # Download Maven
+    curl -O https://apache.mirror.digitalpacific.com.au/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+    
+    # Extract Maven
+    tar xzf apache-maven-3.8.4-bin.tar.gz
+    
+    # Move Maven to desired location
+    mv apache-maven-3.8.4 /usr/local
+    
+    # Set environment variables
+    export M2_HOME=/usr/local/apache-maven-3.8.4
+    export MAVEN_HOME=/usr/local/apache-maven-3.8.4
+    export PATH=$PATH:$M2_HOME/bin
+  displayName: 'Install Maven'
