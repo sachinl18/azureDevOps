@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: sh-newpool
+pool: selfhosted-newpool
 
 steps:
 - task: Maven@3
