@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: selfhosted-newpool
+pool: 
+  image: ubuntu-latest
 
 steps:
 - task: Maven@3
